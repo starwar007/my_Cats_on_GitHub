@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Милые котики</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="scripts/api.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="" class="logo" onclick="return false"><i class="fa-solid fa-paw fa-2x"></i> <span>Котики</span></a>
+        <!-- Добавляю секцию с кнопкой входа для авторизации -->
+        <div class = "center">
+             <a class="btn" href="" id="entrance"><span>ВХОД</span><i class="fa-sharp fa-solid fa-door-open"></i></a>
+             <a class="btn" href="" id="add" onclick="return false"><i class="fa-regular fa-plus"></i></a>
+        </div>
+    </header>
+    
+    <section class = "authorization">
+        <div class="form close__form">
+            <h1>Вход</h1>
+           
+            <div class="input-form">
+                <input type="text" placeholder="Логин">
+            
+            <div class="input-form">
+                <input type="submit" value="Войти">
+            </div>
+            
+        </div>
+    </section>   
+    <main>
+        
+    </main>
+    <footer>
+        <span>©2023 Made by Vasiliev Alexsey</span>
+        <nav>
+            <a href=""><i class="fa-brands fa-github"></i></a>
+            <a href=""><i class="fa-brands fa-vk"></i></a>
+            <a href=""><i class="fa-brands fa-telegram"></i></a>
+        </nav>
+    </footer>
+    <!-- попап для добовления кота  -->
+    <div class="popup-wrapper">
+        <div class="popup" id="popup-form">
+            <div class="popup-close btn"><i class="fa-solid fa-xmark"></i></div>
+            <h2>Добавить питомца</h2>
+            <form action="">
+                <div class="form-img"></div>
+                <input type="number" name="id" min="1" required placeholder="id">
+                <input type="number" name="age" placeholder="Возраст">
+                <input type="text" name="name" required placeholder="Имя">
+                <input type="number" name="rate" placeholder="Рейтинг (0-10)" min="0" max="10">
+                <textarea name="description" placeholder="Описание"></textarea>
+                <label>Любимчик <input type="checkbox" name="favourite" placeholder=""></label>
+                <input type="text" name="img_link" placeholder="Ссылка на фото">
+                <button type="submit">Добавить котика</button>
+            </form>
+        </div>
+    </div>
+    <!-- попап для информации о коте  -->
+    <div class="popup-wrapper-info">
+        <div class="popup-info" id="popup-form-info">
+            <div class="popup-close-info btn"><i class="fa-solid fa-xmark"></i></div>
+                <div class ="info-content"></div>
+                    
+        </div>
+    </div>
+    <script src="scripts/index.js"></script>
+</body>
+
+</html>
